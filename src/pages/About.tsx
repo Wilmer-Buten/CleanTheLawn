@@ -2,29 +2,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { 
-  Users, Award, Leaf, Shield, Clock, Heart,
-  CheckCircle, Star, ArrowRight 
+ Leaf, Shield, Clock, Heart, ArrowRight 
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const About: React.FC = () => {
-  const teamMembers = [
-    {
-      name: 'Elvis Medina',
-      role: 'CEO & Founder',
-      bio: 'With over 10 years of experience in landscaping, Elvis founded Cleanthelawn to bring professional, eco-friendly services to North Alabama. His vision and leadership have made the company the trusted choice for property owners throughout the region.',
-      image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop',
-      specialties: ['Business Strategy', 'Customer Relations', 'Quality Assurance']
-    },
-    {
-      name: 'Marco Carrillo',
-      role: 'Co-Founder & Operations Director',
-      bio: 'Marco co-founded Cleanthelawn with a passion for sustainable landscaping practices. He oversees daily operations and ensures every project meets our high standards of excellence.',
-      image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop',
-      specialties: ['Operations Management', 'Team Coordination', 'Process Optimization']
-    }
-  ];
-
   const values = [
     {
       icon: Leaf,
@@ -205,7 +187,7 @@ const About: React.FC = () => {
                     whileHover={{ scale: 1.02 }}
                   >
                     <img
-                      src="/src/assets/images/ceo.webp"
+                      src="../assets/images/ceo.webp"
                       alt="John Mitchell (CEO) and Sarah Williams (Co-Founder) - Cleanthelawn Leadership Team"
                       className="w-full h-80 rounded-xl object-cover border-4 border-green-500 shadow-lg"
                     />
