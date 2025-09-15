@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, ArrowRight, Eye, Play, Pause } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ChevronLeft, ChevronRight, Eye, Play, Pause } from 'lucide-react';
 
 const BeforeAfterCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -321,22 +320,6 @@ const BeforeAfterCarousel: React.FC = () => {
           </div>
         </div>
 
-        {/* CTA */}
-        <motion.div
-          className="text-center mt-12 sm:mt-16 px-4"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          viewport={{ once: true }}
-        >
-          <Link
-            to="/services"
-            className="inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500 to-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:from-emerald-400 hover:to-green-500 transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-emerald-400/25"
-          >
-            <span>See All Our Transformations</span>
-            <ArrowRight className="w-5 h-5" />
-          </Link>
-        </motion.div>
       </div>
     </section>
   );

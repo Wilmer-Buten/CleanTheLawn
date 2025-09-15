@@ -35,16 +35,6 @@ const Hero: React.FC = () => {
               <motion.div
                 className="absolute -top-4 -right-4 z-0"
                 initial={{ opacity: 0, x: 20, y: -20 }}
-                animate={{ opacity: 1, x: 0, y: 0 }}
-                transition={{ duration: 1, delay: 0.4 }}
-                animate={{
-                  y: [0, -10, 0],
-                  rotate: [0, 2, 0]
-                }}
-                transition={{
-                  y: { duration: 3, repeat: Infinity, ease: "easeInOut" },
-                  rotate: { duration: 4, repeat: Infinity, ease: "easeInOut" }
-                }}
                 animate={{
                   y: [0, -10, 0],
                   rotate: [0, 2, 0]
@@ -65,16 +55,7 @@ const Hero: React.FC = () => {
               <motion.div
                 className="absolute -bottom-4 -left-4 z-0"
                 initial={{ opacity: 0, x: -20, y: 20 }}
-                animate={{ opacity: 1, x: 0, y: 0 }}
-                transition={{ duration: 1, delay: 0.6 }}
-                animate={{
-                  y: [0, 10, 0],
-                  rotate: [0, -2, 0]
-                }}
-                transition={{
-                  y: { duration: 3.5, repeat: Infinity, ease: "easeInOut" },
-                  rotate: { duration: 4.5, repeat: Infinity, ease: "easeInOut" }
-                }}
+              
                 animate={{
                   y: [0, 10, 0],
                   rotate: [0, -2, 0]
