@@ -292,21 +292,6 @@ const Hero: React.FC = () => {
           </motion.div>
         </div>
 
-        {/* Scroll Indicator - Hidden on mobile */}
-        <motion.div
-          className="hidden sm:flex absolute bottom-8 left-1/2 transform -translate-x-1/2 flex-col items-center space-y-2 z-30"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
-        >
-          <span className="text-green-600 text-sm font-medium">Scroll to explore</span>
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <ChevronDown className="w-6 h-6 text-green-600" />
-          </motion.div>
-        </motion.div>
       </div>
     </section>
   );

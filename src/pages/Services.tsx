@@ -1,22 +1,15 @@
-"use client"
-
 import React, { useState, useRef } from "react"
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion"
 import { useNavigate } from "react-router-dom"
 import {
-  TreePine,
-  Hammer,
-  Calendar,
-  ChevronDown,
-  Leaf,
   Wrench,
   Star,
   CheckCircle,
   Clock,
   Play,
   Pause,
-  TrendingUp,
   ArrowRight,
+  ChevronDown,
 } from "lucide-react"
 import { Link } from "react-router-dom"
 
@@ -38,7 +31,6 @@ const Services: React.FC = () => {
 
   const serviceCategories = [
     {
-      icon: Leaf,
       title: "Landscaping & Yard Care",
       description: "Nuestros servicios de paisajismo y cuidado del césped incluyen todo lo necesario para mantener su propiedad en perfectas condiciones. Desde el corte profesional del césped hasta el diseño de jardines personalizados, nos encargamos de cada detalle. Realizamos poda de arbustos, instalación de césped nuevo, creación de canteros de flores, y mantenimiento estacional. Nuestro equipo utiliza técnicas eco-amigables y equipos de última generación para garantizar resultados excepcionales que realcen la belleza natural de su espacio exterior.",
       color: "from-lime-400 to-green-500",
@@ -103,7 +95,6 @@ const Services: React.FC = () => {
       ],
     },
     {
-      icon: TreePine,
       title: "Tree & Plant Services",
       description: "Ofrecemos servicios especializados en el cuidado de árboles y plantas para mantener la salud y belleza de su paisaje. Nuestros arboristas certificados realizan podas estratégicas, remoción segura de árboles peligrosos, y tratamiento de enfermedades. También nos especializamos en la plantación de nuevos árboles, cuidado de arbustos, y manejo integral de la salud vegetal. Utilizamos técnicas profesionales que promueven el crecimiento saludable mientras mantenemos la seguridad de su propiedad y familia.",
       color: "from-emerald-400 to-teal-500",
@@ -147,7 +138,6 @@ const Services: React.FC = () => {
       ],
     },
     {
-      icon: Hammer,
       title: "Construction & Hardscaping",
       description: "Transformamos espacios exteriores con proyectos de construcción y paisajismo duro de alta calidad. Construimos terrazas personalizadas, instalamos patios de piedra y ladrillo, creamos senderos elegantes, y desarrollamos sistemas de riego eficientes. También ofrecemos servicios de lavado a presión para mantener todas las superficies exteriores como nuevas. Nuestro equipo combina funcionalidad y estética para crear espacios exteriores duraderos que aumenten el valor de su propiedad.",
       color: "from-blue-400 to-cyan-500",
@@ -196,7 +186,6 @@ const Services: React.FC = () => {
       ],
     },
     {
-      icon: Calendar,
       title: "Seasonal & Specialty Services",
       description: "Proveemos servicios estacionales y especializados para mantener su propiedad hermosa durante todo el año. En otoño realizamos limpieza completa de hojas y preparación para el invierno. En primavera preparamos su jardín para la temporada de crecimiento con fertilización y aireación. También ofrecemos instalación profesional de luces navideñas, limpieza después de tormentas, y servicios de emergencia. Nuestro enfoque integral asegura que su propiedad se vea espectacular en cada estación.",
       color: "from-orange-400 to-red-500",
@@ -271,7 +260,6 @@ const Services: React.FC = () => {
   }
 
   const handleServiceSelection = (serviceName: string, categoryTitle: string) => {
-    // Navigate to contact page with service pre-selected
     navigate('/contact', { 
       state: { 
         preSelectedService: `${categoryTitle} - ${serviceName}`,
@@ -386,7 +374,7 @@ const Services: React.FC = () => {
               <motion.button
                 key={index}
                 onClick={() => handleCardClick(index)}
-                className={`relative flex items-center space-x-3 px-6 py-4 rounded-2xl border-2 transition-all duration-300 cursor-pointer ${
+                className={`relative flex items-center justify-center px-6 py-4 rounded-2xl border-2 transition-all duration-300 cursor-pointer ${
                   activeCategory === index
                     ? `bg-gradient-to-r ${category.color} text-black border-transparent shadow-2xl`
                     : "bg-gray-800 text-gray-300 border-gray-600 hover:border-gray-500 hover:bg-gray-700"
@@ -394,7 +382,6 @@ const Services: React.FC = () => {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <category.icon className={`w-5 h-5 ${activeCategory === index ? "text-black" : "text-lime-400"}`} />
                 <span className="font-semibold text-sm">{category.title}</span>
 
                 {/* Active Indicator */}
@@ -432,7 +419,7 @@ const Services: React.FC = () => {
             >
               {/* Category Overview */}
               <motion.div
-               className="lg:col-span-1 bg-white rounded-3xl border border-green-200 relative overflow-hidden shadow-lg z-10"
+                className="lg:col-span-1 bg-white rounded-3xl border border-green-200 relative overflow-hidden shadow-lg z-10"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -449,14 +436,6 @@ const Services: React.FC = () => {
 
                 {/* Content */}
                 <div className="p-8">
-                  <motion.div
-                    className={`w-20 h-20 bg-gradient-to-br ${currentCategory.color} rounded-3xl flex items-center justify-center mb-6 shadow-2xl`}
-                    whileHover={{ scale: 1.1, rotate: 10 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    <currentCategory.icon className="w-10 h-10 text-white" />
-                  </motion.div>
-
                   <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 font-nature drop-shadow-sm">
                     {currentCategory.title}
                   </h2>
@@ -523,24 +502,23 @@ const Services: React.FC = () => {
                               <div className="text-lime-400 font-bold text-sm">{service.price}</div>
                             </div>
 
-
-                             {/* Action Button */}
-                             <motion.div
-                               className="mt-4 pt-4 border-t border-gray-700"
-                               initial={{ opacity: 0, y: 10 }}
-                               animate={{ opacity: 1, y: 0 }}
-                               transition={{ duration: 0.3, delay: 0.1 }}
-                             >
-                               <button
-                                 onClick={(e) => {
-                                   e.stopPropagation()
-                                   handleServiceSelection(service.name, currentCategory.title)
-                                 }}
+                            {/* Action Button */}
+                            <motion.div
+                              className="mt-4 pt-4 border-t border-gray-700"
+                              initial={{ opacity: 0, y: 10 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              transition={{ duration: 0.3, delay: 0.1 }}
+                            >
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation()
+                                  handleServiceSelection(service.name, currentCategory.title)
+                                }}
                                 className="w-full bg-emerald-500 hover:bg-emerald-400 text-white px-4 py-2 rounded-lg font-medium hover:font-semibold transition-all duration-300 border border-emerald-500 hover:border-emerald-400 text-sm"
-                               >
-                                 <span>I Want This</span>
-                               </button>
-                             </motion.div>
+                              >
+                                <span>I Want This</span>
+                              </button>
+                            </motion.div>
                           </motion.div>
                         )
                       })}
@@ -580,7 +558,6 @@ const Services: React.FC = () => {
                               <div className="text-right">
                                 <div className="text-lime-400 font-bold text-lg mb-2">{service.price}</div>
                                 <button
-                                  className="bg-gray-700 hover:bg-lime-400 text-gray-300 hover:text-black px-4 py-2 rounded-lg font-medium hover:font-semibold transition-all duration-300 border border-gray-600 hover:border-lime-400"
                                   className="bg-emerald-500 hover:bg-emerald-400 text-white px-4 py-2 rounded-lg font-medium hover:font-semibold transition-all duration-300 border border-emerald-500 hover:border-emerald-400"
                                   type="button"
                                   onClick={(e) => {
@@ -713,4 +690,4 @@ const Services: React.FC = () => {
   )
 }
 
-export default Services
+export default Services;
