@@ -5,7 +5,7 @@ import {
  Leaf, Shield, Clock, Heart, ArrowRight 
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
+import ceo from '../assets/images/ceo.webp';
 const About: React.FC = () => {
   const values = [
     {
@@ -187,7 +187,7 @@ const About: React.FC = () => {
                     whileHover={{ scale: 1.02 }}
                   >
                     <img
-                      src="../assets/images/ceo.webp"
+                      src={ceo}
                       alt="John Mitchell (CEO) and Sarah Williams (Co-Founder) - Cleanthelawn Leadership Team"
                       className="w-full h-80 rounded-xl object-cover border-4 border-green-500 shadow-lg"
                     />
