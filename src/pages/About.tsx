@@ -188,7 +188,7 @@ const About: React.FC = () => {
                   >
                     <img
                       src={ceo}
-                      alt="John Mitchell (CEO) and Sarah Williams (Co-Founder) - Cleanthelawn Leadership Team"
+                      alt="Elvis Carrillo (CEO) and Marcos Medina (Co-Founder) - Cleanthelawn Leadership Team"
                       className="w-full h-80 rounded-xl object-cover border-4 border-green-500 shadow-lg"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl" />
@@ -202,18 +202,18 @@ const About: React.FC = () => {
                       </h3>
                       <div className="space-y-4">
                         <div>
-                          <h4 className="text-lg font-semibold text-green-600">John Mitchell</h4>
+                          <h4 className="text-lg font-semibold text-green-600">Elvis Medina</h4>
                           <p className="text-gray-600 text-sm font-medium mb-2">CEO & Founder</p>
                           <p className="text-gray-600 text-sm leading-relaxed">
-                            With over 10 years of experience in landscaping, John founded Cleanthelawn 
+                            With over 10 years of experience in landscaping, Elvis founded Cleanthelawn 
                             to bring professional, eco-friendly services to North Alabama.
                           </p>
                         </div>
                         <div>
-                          <h4 className="text-lg font-semibold text-green-600">Sarah Williams</h4>
+                          <h4 className="text-lg font-semibold text-green-600">Marcos Carrillo</h4>
                           <p className="text-gray-600 text-sm font-medium mb-2">Co-Founder & Operations Director</p>
                           <p className="text-gray-600 text-sm leading-relaxed">
-                            Sarah co-founded Cleanthelawn with a passion for sustainable landscaping 
+                            Marcos co-founded Cleanthelawn with a passion for sustainable landscaping 
                             practices and oversees daily operations.
                           </p>
                         </div>
