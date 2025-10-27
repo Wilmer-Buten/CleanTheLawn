@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
-
 * {
   margin: 0;
   padding: 0;
@@ -15,30 +13,60 @@ html {
 }
 
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
 }
 
-/* Nature-inspired typography classes */
+/* Premium typography classes */
 .font-nature {
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-feature-settings: 'liga', 'dlig', 'kern';
 }
 
 .font-organic {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-feature-settings: 'kern', 'liga';
 }
 
-/* Headings use Comfortaa for a more organic, nature feel */
+.font-premium {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11', 'kern', 'liga';
+}
+
+/* Headings use Playfair Display for elegance */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Comfortaa', cursive;
-  font-weight: 700;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-weight: 600;
+  font-feature-settings: 'liga', 'dlig', 'kern';
+  letter-spacing: -0.025em;
 }
 
-/* Body text uses Quicksand for readability */
+/* Body text uses Inter for readability */
 p, span, div {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+/* Special text styles */
+.text-elegant {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-feature-settings: 'liga', 'dlig';
+  letter-spacing: -0.01em;
+}
+
+.text-modern {
+  font-family: 'Poppins', sans-serif;
+  font-feature-settings: 'kern', 'liga';
+  letter-spacing: -0.01em;
+}
+
+.text-clean {
+  font-family: 'Inter', sans-serif;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  letter-spacing: -0.005em;
 }
 
 /* Custom scrollbar */

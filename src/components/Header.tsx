@@ -74,6 +74,8 @@ const Header: React.FC = () => {
               src="/logo.webp"
               alt="Cleanthelawn Landscaping Logo"
              className="h-16 sm:h-20 md:h-24 rounded-xl"
+             loading="eager"
+             decoding="async"
             />
           </Link>
 

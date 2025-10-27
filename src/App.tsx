@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header';
@@ -8,14 +7,12 @@ import Services from './pages/Services';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import ScrollToTop from './components/ScrollToTop';
-import ParticleBackground from './components/ParticleBackground';
 
 function App() {
   return (
     <HelmetProvider>
       <Router>
-        <div className="min-h-screen bg-gradient-to-br from-green-100/30 via-blue-100/40 to-emerald-100/30 text-gray-800 relative overflow-x-hidden">
-          <ParticleBackground />
+        <div className="min-h-screen bg-green-50 text-gray-800 relative overflow-x-hidden">
           <Header />
           <ScrollToTop />
           <main>

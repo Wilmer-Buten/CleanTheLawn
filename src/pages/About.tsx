@@ -6,6 +6,9 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ceo from '../assets/images/ceo.webp';
+
+// Import additional images
+import aboutMainImage from '../assets/images/principal2.webp';
 const About: React.FC = () => {
   const values = [
     {
@@ -31,19 +34,18 @@ const About: React.FC = () => {
   ];
 
   const timeline = [
-    { year: '2019', event: 'Company Founded', description: 'Started with a vision to provide exceptional landscaping services' },
-    { year: '2020', event: 'Team Expansion', description: 'Grew to serve multiple cities across North Alabama' },
-    { year: '2022', event: '500+ Customers', description: 'Reached milestone of serving over 500 satisfied customers' },
-    { year: '2024', event: 'Service Expansion', description: 'Added comprehensive home services and seasonal programs' },
-    { year: '2025', event: 'Innovation Focus', description: 'Implementing eco-friendly practices and advanced techniques' }
+    { year: 'June 2025', event: 'Company Founded', description: 'Elvis and Marco officially launched Cleanthelawn with a vision to provide exceptional landscaping services' },
+    { year: 'Summer 2025', event: 'First Clients', description: 'Successfully completed our first landscaping projects in Prince George\'s County' },
+    { year: 'Fall 2025', event: 'Service Expansion', description: 'Expanded services to include seasonal cleanup and maintenance programs' },
+    { year: '2026', event: 'Growth Phase', description: 'Planning to serve multiple cities across Prince George\'s County' },
   ];
 
   return (
     <>
       <Helmet>
         <title>About Us - Cleanthelawn Landscaping Team & Company History</title>
-        <meta name="description" content="Learn about Cleanthelawn Landscaping's experienced team, company values, and commitment to excellence in North Alabama landscaping services." />
-        <meta name="keywords" content="landscaping company North Alabama, professional landscaping team, Athens AL landscaping, eco-friendly lawn care" />
+        <meta name="description" content="Learn about Cleanthelawn Landscaping's experienced team, company values, and commitment to excellence in Prince George's County landscaping services." />
+        <meta name="keywords" content="landscaping company Prince George's County MD, professional landscaping team, College Park MD landscaping, eco-friendly lawn care" />
         <link rel="canonical" href="https://cleanthelawn.com/about" />
       </Helmet>
 
@@ -51,7 +53,7 @@ const About: React.FC = () => {
         {/* Extra spacing for hero content */}
         <div className="pt-24">
         {/* Header Section with Background */}
-        <div className="bg-gradient-to-r from-blue-200/60 via-emerald-200/50 to-green-200/40 border-b-4 border-emerald-300/50 shadow-lg mb-16">
+        <div className="bg-green-100 border-b-4 border-emerald-300/50 shadow-lg mb-16">
           <div className="container mx-auto px-4 py-16">
             {/* Header */}
             <motion.div
@@ -64,8 +66,8 @@ const About: React.FC = () => {
                 About <span className="text-emerald-600">Cleanthelawn</span>
               </h1>
               <p className="text-xl text-green-700 max-w-3xl mx-auto leading-relaxed font-organic">
-                We're passionate about creating beautiful outdoor spaces that enhance 
-                your property value and quality of life. Our experienced team brings 
+                We're passionate about creating beautiful outdoor spaces in Prince George's County 
+                that enhance your property value and quality of life. Our experienced team brings 
                 professionalism, reliability, and eco-friendly practices to every project.
               </p>
             </motion.div>
@@ -83,27 +85,28 @@ const About: React.FC = () => {
           >
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-green-800">
-                Professional Landscaping in <span className="text-emerald-600">North Alabama</span>
+                Professional Landscaping in <span className="text-emerald-600">Prince George's County</span>
               </h2>
               <p className="text-green-700 leading-relaxed">
-                Cleanthelawn Landscaping has been serving North Alabama communities with 
-                dedication and expertise since 2019. We specialize in comprehensive 
+                Cleanthelawn Landscaping has been serving Prince George's County communities with 
+                dedication and expertise since June 2025. We specialize in comprehensive 
                 landscaping and property maintenance services that enhance the beauty 
                 and value of residential and commercial properties.
               </p>
               <p className="text-green-700 leading-relaxed">
-                Our commitment to excellence, combined with eco-friendly practices and 
-                customer-focused service, has made us the trusted choice for property 
-                owners throughout Athens, Huntsville, Madison, Decatur, and surrounding areas.
+                Founded by two ambitious young entrepreneurs, our commitment to excellence, 
+                combined with eco-friendly practices and customer-focused service, makes us 
+                the emerging choice for property owners throughout College Park, Bowie, 
+                Greenbelt, Hyattsville, and surrounding areas.
               </p>
               <div className="grid grid-cols-2 gap-4 pt-4">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-emerald-600 mb-1">500+</div>
-                  <div className="text-green-600 text-sm">Projects Completed</div>
+                  <div className="text-3xl font-bold text-emerald-600 mb-1">100%</div>
+                  <div className="text-green-600 text-sm">Customer Satisfaction</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-emerald-600 mb-1">19</div>
-                  <div className="text-green-600 text-sm">Cities Served</div>
+                  <div className="text-green-600 text-sm">Cities to Serve</div>
                 </div>
               </div>
             </div>
@@ -114,9 +117,11 @@ const About: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <img
-                  src="https://images.pexels.com/photos/1453499/pexels-photo-1453499.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+                  src={aboutMainImage}
                   alt="Professional landscaping work"
                   className="w-full h-full object-cover rounded-2xl"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               </motion.div>
@@ -146,7 +151,8 @@ const About: React.FC = () => {
                 >
                   <motion.div
                     className="w-20 h-20 bg-gray-800 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-lime-400 transition-all duration-300"
-                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.2 }}
                   >
                     <value.icon className="w-10 h-10 text-emerald-600 group-hover:text-white transition-colors" />
                   </motion.div>
@@ -172,50 +178,66 @@ const About: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-green-800 text-center mb-12">
               Meet Our <span className="text-emerald-600">Expert Team</span>
             </h2>
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-7xl mx-auto">
               <motion.div
-                className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-green-300 transition-all duration-300 hover:scale-105 group shadow-lg"
+                className="bg-white rounded-2xl p-6 lg:p-8 border border-gray-200 hover:border-green-300 transition-all duration-300 hover:scale-105 group shadow-lg"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8 items-start">
                   {/* Team Photo */}
                   <motion.div
-                    className="relative"
+                    className="lg:col-span-2 relative"
                     whileHover={{ scale: 1.02 }}
                   >
                     <img
                       src={ceo}
                       alt="Elvis Carrillo (CEO) and Marcos Medina (Co-Founder) - Cleanthelawn Leadership Team"
-                      className="w-full h-80 rounded-xl object-cover border-4 border-green-500 shadow-lg"
+                      className="w-full h-64 lg:h-80 rounded-xl object-cover border-4 border-green-500 shadow-lg"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl" />
                   </motion.div>
 
                   {/* Team Info */}
-                  <div className="space-y-6">
+                  <div className="lg:col-span-3 space-y-6">
                     <div>
                       <h3 className="text-2xl font-bold text-gray-800 mb-4 group-hover:text-green-600 transition-colors">
                         Our Founding Team
                       </h3>
-                      <div className="space-y-4">
+                      <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
                         <div>
-                          <h4 className="text-lg font-semibold text-green-600">Elvis Medina</h4>
-                          <p className="text-gray-600 text-sm font-medium mb-2">CEO & Founder</p>
-                          <p className="text-gray-600 text-sm leading-relaxed">
-                            With over 10 years of experience in landscaping, Elvis founded Cleanthelawn 
-                            to bring professional, eco-friendly services to North Alabama.
-                          </p>
+                          <div className="bg-green-50 rounded-lg p-4 h-full">
+                            <h4 className="text-lg font-semibold text-green-600 mb-1">Elvis Medina</h4>
+                            <p className="text-gray-600 text-sm font-medium mb-3">Co-Founder & CEO</p>
+                            <p className="text-gray-600 text-sm leading-relaxed">
+                              Elvis Medina is an ambitious entrepreneur and junior in college from 
+                              Prince George's County, Maryland. A Dean's List student and resident 
+                              advisor, he brings strong leadership, discipline, and attention to 
+                              detail in everything he does. With a deep passion for entrepreneurship, 
+                              service, and personal growth, Elvis balances academic excellence with 
+                              athletic drive. Guided by his faith in God and love for family, he is 
+                              committed to building a life and career that uplifts others.
+                            </p>
+                          </div>
                         </div>
                         <div>
-                          <h4 className="text-lg font-semibold text-green-600">Marcos Carrillo</h4>
-                          <p className="text-gray-600 text-sm font-medium mb-2">Co-Founder & Operations Director</p>
-                          <p className="text-gray-600 text-sm leading-relaxed">
-                            Marcos co-founded Cleanthelawn with a passion for sustainable landscaping 
-                            practices and oversees daily operations.
-                          </p>
+                          <div className="bg-emerald-50 rounded-lg p-4 h-full">
+                            <h4 className="text-lg font-semibold text-green-600 mb-1">Marco Carrillo</h4>
+                            <p className="text-gray-600 text-sm font-medium mb-3">Co-Founder & Investor</p>
+                            <p className="text-gray-600 text-sm leading-relaxed">
+                              Marco Carrillo is an investor and entrepreneur from Montgomery County, 
+                              Maryland, with a B.S. in Finance. He is driven, respectful, and known 
+                              for his charismatic leadership and strong sense of integrity. Grounded 
+                              in his faith in God, Marco values family, health, and serving the 
+                              community. Outside of work, he enjoys playing basketball, hiking, and 
+                              expressing his creativity through hands-on activities. His passion for 
+                              growth and giving back inspires everything he does.
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -223,7 +245,7 @@ const About: React.FC = () => {
                     <div className="pt-4 border-t border-gray-200">
                       <p className="text-gray-800 font-medium text-sm mb-3">Our Leadership Focus:</p>
                       <div className="flex flex-wrap gap-2">
-                        {['Customer Excellence', 'Quality Assurance', 'Team Leadership', 'Sustainable Practices'].map((focus, i) => (
+                        {['Academic Excellence', 'Community Service', 'Faith & Family', 'Entrepreneurial Growth'].map((focus, i) => (
                           <span
                             key={i}
                             className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium"
@@ -267,23 +289,29 @@ const About: React.FC = () => {
                     viewport={{ once: true }}
                   >
                     <div className="flex-1 bg-gradient-to-br from-green-200/60 via-emerald-200/50 to-blue-200/40 rounded-2xl p-6 border border-green-300/50 relative shadow-lg">
-                      <div className="flex items-center space-x-4 mb-4">
-                        <div className="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center font-bold text-white">
-                          {item.year}
+                      <div className="flex items-start space-x-4 mb-4">
+                        <div className="w-20 h-20 bg-emerald-500 rounded-full flex items-center justify-center font-bold text-white text-xs text-center leading-tight px-2 flex-shrink-0">
+                          <span className="break-words hyphens-auto">{item.year}</span>
                         </div>
-                        <h3 className="text-xl font-semibold text-green-800 font-nature">
-                          {item.event}
-                        </h3>
+                        <div className="flex-1 min-w-0">
+                          <h3 className="text-lg sm:text-xl font-semibold text-green-800 font-nature break-words">
+                            {item.event}
+                          </h3>
+                        </div>
                       </div>
-                      <p className="text-green-700 leading-relaxed font-organic">
+                      <p className="text-green-700 leading-relaxed font-organic break-words hyphens-auto">
                         {item.description}
                       </p>
                     </div>
                     
                     {/* Timeline Dot */}
-                    <div className="w-4 h-4 bg-emerald-500 rounded-full hidden md:block relative z-10" />
+                    <div className="w-4 h-4 bg-emerald-500 rounded-full hidden md:block relative z-20 flex-shrink-0" />
                     
-                    <div className="flex-1 hidden md:block" />
+                    {index % 2 === 0 ? (
+                      <div className="flex-1 hidden md:block" />
+                    ) : (
+                      <div className="flex-1 hidden md:block" />
+                    )}
                   </motion.div>
                 ))}
               </div>

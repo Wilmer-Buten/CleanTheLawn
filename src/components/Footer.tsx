@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Mail, Phone, MapPin, Leaf } from 'lucide-react';
+import { Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Footer: React.FC = () => {
   const serviceAreas = [
-    'Athens', 'Ardmore', 'Belle Mina', 'Brownsboro', 'Madison',
-    'Hartselle', 'Decatur', 'Huntsville', 'Elkmont', 'Grant',
-    'Guntersville', 'Gurley', 'Harvest', 'Hazel Green', 'Laceys Spring',
-    'Meridianville', 'Mooresville', 'New Hope', 'New Market'
+    'Berwyn Heights', 'Bladensburg', 'Bowie', 'Brentwood', 'Capitol Heights',
+    'Cheverly', 'College Park', 'District Heights', 'Fairmount Heights',
+    'Glenarden', 'Greenbelt', 'Hyattsville', 'Landover Hills', 'Laurel',
+    'New Carrollton', 'Riverdale Park', 'Seat Pleasant', 'University Park', 'Upper Marlboro'
   ];
 
   const quickLinks = [
@@ -26,10 +26,10 @@ const Footer: React.FC = () => {
       </div>
 
       <div className="container mx-auto px-4 py-12 relative">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-2">
           {/* Company Info */}
           <motion.div
-            className="space-y-4"
+            className="space-y-4 lg:col-span-1"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -40,6 +40,8 @@ const Footer: React.FC = () => {
                 src="/logo.webp"
                 alt="Cleanthelawn Landscaping Logo"
                 className="h-32 w-auto rounded-xl shadow-lg border-2 border-white/20"
+                loading="lazy"
+                decoding="async"
               />
               <div className="text-left">
                 <h3 className="text-2xl font-bold text-white font-nature mb-1">Cleanthelawn</h3>
@@ -47,7 +49,7 @@ const Footer: React.FC = () => {
               </div>
             </div>
             <p className="text-green-100 text-sm leading-relaxed font-organic">
-              Expert landscaping and yard care services in North Alabama. 
+              Expert landscaping and yard care services in Prince George's County. 
               Professional, reliable, and eco-friendly solutions for your outdoor spaces.
             </p>
             <div className="flex space-x-4">
@@ -68,9 +70,9 @@ const Footer: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Quick Links */}
+          {/* Quick Links - Aumentar ancho para ocupar más espacio */}
           <motion.div
-            className="space-y-4"
+            className="space-y-4 lg:col-span-1 lg:col-start-2"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -91,9 +93,9 @@ const Footer: React.FC = () => {
             </ul>
           </motion.div>
 
-          {/* Contact Info */}
+          {/* Contact Info - Sin max-width y posicionado más cerca */}
           <motion.div
-            className="space-y-4"
+            className="space-y-4 lg:col-span-1 lg:col-start-3"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -107,22 +109,22 @@ const Footer: React.FC = () => {
                   href="tel:555-123-4567"
                   className="text-green-100 hover:text-yellow-300 transition-colors text-sm"
                 >
-                  (555) 123-4567
+                  (240) 810-6798
                 </a>
               </div>
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-yellow-300" />
                 <a
-                  href="mailto:info@cleanthelawn.com"
-                  className="text-green-100 hover:text-yellow-300 transition-colors text-sm"
+                  href="mailto:cleanthelawnlandscaping@gmail.com"
+                  className="text-green-100 hover:text-yellow-300 transition-colors text-sm break-words"
                 >
-                  info@cleanthelawn.com
+                  cleanthelawnlandscaping@gmail.com
                 </a>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="w-4 h-4 text-yellow-300 mt-0.5" />
                 <span className="text-green-100 text-sm">
-                  Serving North Alabama
+                  Serving Prince George's County
                 </span>
               </div>
             </div>
@@ -130,7 +132,7 @@ const Footer: React.FC = () => {
 
           {/* Service Areas */}
           <motion.div
-            className="space-y-4"
+            className="space-y-4 lg:col-span-1 lg:col-start-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
