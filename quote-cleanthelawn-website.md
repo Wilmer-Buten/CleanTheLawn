@@ -11,7 +11,7 @@
 
 ## 📋 Resumen del Proyecto
 
-Desarrollo de sitio web profesional y moderno para empresa de paisajismo en North Alabama, con diseño responsivo, optimización SEO, y funcionalidades avanzadas de contacto.
+Desarrollo de sitio web profesional y moderno para empresa de paisajismo en PG county, MD, con diseño responsivo, optimización SEO, y funcionalidades avanzadas de contacto.
 
 ---
 

@@ -126,7 +126,7 @@ const Hero: React.FC = () => {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-green-700">
                   Landscaping
                 </span>{' '}
-                in North Alabama
+                in PG county, MD
               </h1>
               
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-green-700 mb-6 sm:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-organic">

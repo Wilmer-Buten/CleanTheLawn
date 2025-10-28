@@ -143,7 +143,7 @@ const Services = () => {
                   <a onClick={() => {navigate('/contact')}}
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300 group-hover:scale-105 cursor-pointer"
                   >
-                    Request Quote
+                    Check Quote
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </a>
                 </div>

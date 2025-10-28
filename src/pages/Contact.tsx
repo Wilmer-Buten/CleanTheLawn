@@ -27,7 +27,7 @@ const Contact: React.FC = () => {
     {
       icon: MapPin,
       title: 'Service Area',
-      value: 'North Alabama',
+      value: 'PG county, MD',
       link: '#',
       description: '19 cities and growing'
     },
