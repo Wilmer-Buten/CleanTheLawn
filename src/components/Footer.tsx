@@ -1,21 +1,36 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Footer: React.FC = () => {
   const serviceAreas = [
-    'Berwyn Heights', 'Bladensburg', 'Bowie', 'Brentwood', 'Capitol Heights',
-    'Cheverly', 'College Park', 'District Heights', 'Fairmount Heights',
-    'Glenarden', 'Greenbelt', 'Hyattsville', 'Landover Hills', 'Laurel',
-    'New Carrollton', 'Riverdale Park', 'Seat Pleasant', 'University Park', 'Upper Marlboro'
+    "Berwyn Heights",
+    "Bladensburg",
+    "Bowie",
+    "Brentwood",
+    "Capitol Heights",
+    "Cheverly",
+    "College Park",
+    "District Heights",
+    "Fairmount Heights",
+    "Glenarden",
+    "Greenbelt",
+    "Hyattsville",
+    "Landover Hills",
+    "Laurel",
+    "New Carrollton",
+    "Riverdale Park",
+    "Seat Pleasant",
+    "University Park",
+    "Upper Marlboro",
   ];
 
   const quickLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Services', path: '/services' },
-    { name: 'About Us', path: '/about' },
-    { name: 'Contact', path: '/contact' },
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "About Us", path: "/about" },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
@@ -44,24 +59,33 @@ const Footer: React.FC = () => {
                 decoding="async"
               />
               <div className="text-left">
-                <h3 className="text-2xl font-bold text-white font-nature mb-1">Cleanthelawn</h3>
-                <p className="text-sm text-green-100 uppercase tracking-wider font-organic">Professional Landscaping</p>
+                <h3 className="text-2xl font-bold text-white font-nature mb-1">
+                  Cleanthelawn
+                </h3>
+                <p className="text-sm text-green-100 uppercase tracking-wider font-organic">
+                  Professional Landscaping
+                </p>
               </div>
             </div>
             <p className="text-green-100 text-sm leading-relaxed font-organic">
-              Expert landscaping and yard care services in Prince George's County. 
-              Professional, reliable, and eco-friendly solutions for your outdoor spaces.
+              Expert landscaping and yard care services in Prince George's
+              County. Professional, reliable, and eco-friendly solutions for
+              your outdoor spaces.
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61577633038354" // Agregado https://
+                target="_blank" // Nuevo: abre en nueva pestaña
+                rel="noopener noreferrer" // Nuevo: seguridad
                 className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-green-800 transition-all duration-300"
                 aria-label="Facebook"
               >
                 <Facebook size={16} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/cleanthelawn_landscaping/?igsh=aDZ2cmhvZmdrdmRp"
+                target="_blank" // Nuevo: abre en nueva pestaña
+                rel="noopener noreferrer" // Nuevo: seguridad
                 className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-green-800 transition-all duration-300"
                 aria-label="Instagram"
               >
@@ -164,10 +188,16 @@ const Footer: React.FC = () => {
             © 2025 Cleanthelawn Landscaping. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm">
-            <a href="#" className="text-green-100 hover:text-yellow-300 transition-colors">
+            <a
+              href="#"
+              className="text-green-100 hover:text-yellow-300 transition-colors"
+            >
               Privacy Policy
             </a>
-            <a href="#" className="text-green-100 hover:text-yellow-300 transition-colors">
+            <a
+              href="#"
+              className="text-green-100 hover:text-yellow-300 transition-colors"
+            >
               Terms of Service
             </a>
           </div>
