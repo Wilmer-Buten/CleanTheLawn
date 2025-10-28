@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
 import Hero from '../components/Hero';
 import ServicesTeaser from '../components/ServicesTeaser';
 import ServicesCarousel from '../components/TestimonialsCarousel';
@@ -21,7 +20,7 @@ const Home: React.FC = () => {
       
       <Hero />
       <ServicesTeaser />
-      <ServicesCarousel />
+      {/* <ServicesCarousel /> */}
       <WhyChooseUs />
       <ServiceAreas />
     </>

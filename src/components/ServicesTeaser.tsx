@@ -126,7 +126,7 @@ const ServicesTeaser: React.FC = () => {
     {
       icon: Calendar,
       title: "Seasonal Services",
-      description: "Year-round maintenance including fall cleanup and spring preparation.",
+      description: "Year-round maintenance including fall and winter cleanup and spring preparation.",
       image: seasonalImage,
       subServices: [
         "Fall leaf raking & removal",

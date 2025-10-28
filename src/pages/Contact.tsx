@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { 
-  Phone, Mail, MapPin, Clock, Send, 
+  Phone, Mail, MapPin, Clock, 
   CheckCircle, Star, MessageSquare 
 } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
@@ -100,7 +100,7 @@ const Contact: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               {/* Contact Details */}
-              <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700">
+              <div className="bg-emerald-600 rounded-2xl p-8 border border-emerald-500">
                 <h2 className="text-2xl font-bold text-white mb-6 flex items-center space-x-3">
                   <MessageSquare className="w-6 h-6 text-lime-400" />
                   <span>Get In Touch</span>
@@ -127,7 +127,7 @@ const Contact: React.FC = () => {
                         >
                           {info.value}
                         </a>
-                        <p className="text-gray-400 text-sm mt-1">
+                        <p className="text-gray-300 text-sm mt-1">
                           {info.description}
                         </p>
                       </div>

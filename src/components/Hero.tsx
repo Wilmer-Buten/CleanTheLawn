@@ -1,112 +1,36 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { ArrowRight, Phone, Star, CheckCircle } from 'lucide-react';
+"use client"
+
+import type React from "react"
+import { Link } from "react-router-dom"
+import { motion } from "framer-motion"
+import { ArrowRight, Phone, Star, CheckCircle } from "lucide-react"
 
 // Import hero images
-import heroMainImage from '../assets/images/ceo.webp';
-import heroSecondImage from '../assets/images/2nd.webp';
-import heroThirdImage from '../assets/images/3rd.webp';
+import heroMainImage from "../assets/images/ceo.webp"
+import heroSecondImage from "../assets/images/2nd.webp"
+import heroThirdImage from "../assets/images/3rd.webp"
 
 const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen bg-green-50 overflow-hidden pt-20 sm:pt-24 lg:pt-28 xl:pt-32">
-
       <div className="container mx-auto px-4 relative z-30">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[calc(100vh-7rem)] lg:min-h-[calc(100vh-8rem)] py-12 lg:py-20">
-          
           {/* Mobile Images Section - Shows only on mobile */}
           <div className="lg:hidden order-1 flex justify-center items-center mb-8">
-            <div className="relative">
-              {/* Main Image */}
-              <motion.div
-                className="relative z-10"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0.2 }}
-              >
-                <img
-                  src={heroMainImage}
-                  alt="Professional lawn mowing service"
-                  className="w-48 h-36 rounded-2xl shadow-2xl border-2 border-white object-cover"
-                  loading="eager"
-                  decoding="async"
-                />
-              </motion.div>
-
-              {/* Floating Image 1 */}
-              <motion.div
-                className="absolute -top-2 -right-2 z-0"
-                initial={{ opacity: 0, x: 20, y: -20 }}
-                animate={{
-                  y: [0, -10, 0],
-                  rotate: [0, 2, 0]
-                }}
-                transition={{
-                  y: { duration: 3, repeat: Infinity, ease: "easeInOut" },
-                  rotate: { duration: 4, repeat: Infinity, ease: "easeInOut" }
-                }}
-              >
-                <img
-                  src={heroSecondImage}
-                  alt="Tree trimming service"
-                  className="w-20 h-15 rounded-xl shadow-lg border-2 border-white object-cover"
-                  loading="eager"
-                  decoding="async"
-                />
-              </motion.div>
-
-              {/* Floating Image 2 */}
-              <motion.div
-                className="absolute -bottom-2 -left-2 z-0"
-                initial={{ opacity: 0, x: -20, y: 20 }}
-              
-                animate={{
-                  y: [0, 10, 0],
-                  rotate: [0, -2, 0]
-                }}
-                transition={{
-                  y: { duration: 3.5, repeat: Infinity, ease: "easeInOut" },
-                  rotate: { duration: 4.5, repeat: Infinity, ease: "easeInOut" }
-                }}
-              >
-                <img
-                  src={heroThirdImage}
-                  alt="Landscaping design service"
-                  className="w-20 h-15 rounded-xl shadow-lg border-2 border-white object-cover"
-                  loading="eager"
-                  decoding="async"
-                />
-              </motion.div>
-
-              {/* Decorative Elements - Mobile */}
-              <motion.div
-                className="absolute top-2 left-2 w-3 h-3 bg-yellow-400 rounded-full z-0"
-                animate={{
-                  scale: [1, 1.2, 1],
-                  opacity: [0.7, 1, 0.7]
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
+            <motion.div
+              className="w-full max-w-md"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.2 }}
+            >
+              <img
+                src={heroMainImage || "/placeholder.svg"}
+                alt="Professional lawn mowing service"
+                className="w-full h-64 rounded-2xl shadow-2xl border-2 border-white object-cover"
+                loading="eager"
+                decoding="async"
               />
-              
-              <motion.div
-                className="absolute bottom-2 right-2 w-2 h-2 bg-emerald-400 rounded-full z-0"
-                animate={{
-                  scale: [1, 1.3, 1],
-                  opacity: [0.6, 1, 0.6]
-                }}
-                transition={{
-                  duration: 2.5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 1
-                }}
-              />
-            </div>
+            </motion.div>
           </div>
 
           {/* Content Section */}
@@ -122,17 +46,16 @@ const Hero: React.FC = () => {
               transition={{ duration: 0.4, delay: 0.1 }}
             >
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-green-800 mb-4 sm:mb-6 leading-tight">
-                Professional{' '}
+                Professional{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-green-700">
                   Landscaping
-                </span>{' '}
+                </span>{" "}
                 in PG county, MD
               </h1>
-              
+
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-green-700 mb-6 sm:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-organic">
-                Transform your outdoor space with expert lawn care, landscaping, 
-                and property maintenance services. Serving Athens, Huntsville, 
-                Madison, Decatur, and surrounding areas.
+                Transform your outdoor space with expert lawn care, landscaping, and property maintenance services.
+                Serving Athens, Huntsville, Madison, Decatur, and surrounding areas.
               </p>
             </motion.div>
 
@@ -143,14 +66,9 @@ const Hero: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.2 }}
             >
-              {[
-                'Consistent Maintenance',
-                'Free Estimates',
-                '5-Star Service',
-                '19+ Cities Served'
-              ].map((feature, index) => (
+              {[...Array(4)].map((_, index) => (
                 <motion.div
-                  key={feature}
+                  key={index}
                   className="flex items-center space-x-2 sm:space-x-3 justify-center lg:justify-start"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -158,7 +76,7 @@ const Hero: React.FC = () => {
                 >
                   <CheckCircle className="w-4 sm:w-5 h-4 sm:h-5 text-emerald-500 flex-shrink-0" />
                   <span className="text-green-700 font-medium text-sm sm:text-base">
-                    {feature}
+                    {["Consistent Maintenance", "Free Estimates", "5-Star Service", "19+ Cities Served"][index]}
                   </span>
                 </motion.div>
               ))}
@@ -178,7 +96,7 @@ const Hero: React.FC = () => {
                 <span>Get Free Quote</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-150" />
               </Link>
-              
+
               <a
                 href="tel:555-123-4567"
                 className="group flex items-center space-x-3 text-green-600 hover:text-emerald-600 transition-colors duration-150 font-organic font-semibold w-full sm:w-auto justify-center"
@@ -202,9 +120,7 @@ const Hero: React.FC = () => {
                   <Star key={i} className="w-4 sm:w-5 h-4 sm:h-5 text-yellow-400 fill-current" />
                 ))}
               </div>
-              <span className="text-green-700 font-medium text-sm sm:text-base">
-                500+ Happy Customers
-              </span>
+              <span className="text-green-700 font-medium text-sm sm:text-base">500+ Happy Customers</span>
             </motion.div>
           </motion.div>
 
@@ -217,13 +133,9 @@ const Hero: React.FC = () => {
           >
             <div className="relative">
               {/* Main Image */}
-              <motion.div
-                className="relative z-10"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.15 }}
-              >
+              <motion.div className="relative z-10" whileHover={{ scale: 1.05 }} transition={{ duration: 0.15 }}>
                 <img
-                  src={heroMainImage}
+                  src={heroMainImage || "/placeholder.svg"}
                   alt="Professional lawn mowing service"
                   className="w-80 lg:w-96 xl:w-[450px] h-60 lg:h-72 xl:h-80 rounded-3xl shadow-2xl border-4 border-white object-cover"
                   loading="eager"
@@ -235,16 +147,16 @@ const Hero: React.FC = () => {
               <motion.div
                 className="absolute -top-8 -right-8 z-0"
                 animate={{
-                  y: [0, -5, 0]
+                  y: [0, -5, 0],
                 }}
                 transition={{
                   duration: 6,
-                  repeat: Infinity,
-                  ease: "easeInOut"
+                  repeat: Number.POSITIVE_INFINITY,
+                  ease: "easeInOut",
                 }}
               >
                 <img
-                  src={heroSecondImage}
+                  src={heroSecondImage || "/placeholder.svg"}
                   alt="Tree trimming service"
                   className="w-32 lg:w-40 xl:w-48 h-24 lg:h-30 xl:h-36 rounded-2xl shadow-xl border-4 border-white object-cover"
                   loading="eager"
@@ -255,16 +167,16 @@ const Hero: React.FC = () => {
               <motion.div
                 className="absolute -bottom-8 -left-8 z-0"
                 animate={{
-                  y: [0, 5, 0]
+                  y: [0, 5, 0],
                 }}
                 transition={{
                   duration: 8,
-                  repeat: Infinity,
-                  ease: "easeInOut"
+                  repeat: Number.POSITIVE_INFINITY,
+                  ease: "easeInOut",
                 }}
               >
                 <img
-                  src={heroThirdImage}
+                  src={heroThirdImage || "/placeholder.svg"}
                   alt="Landscaping design service"
                   className="w-32 lg:w-40 xl:w-48 h-24 lg:h-30 xl:h-36 rounded-2xl shadow-xl border-4 border-white object-cover"
                   loading="eager"
@@ -276,34 +188,33 @@ const Hero: React.FC = () => {
               <motion.div
                 className="absolute top-4 left-4 w-6 h-6 bg-yellow-400 rounded-full z-0"
                 animate={{
-                  opacity: [0.5, 0.8, 0.5]
+                  opacity: [0.5, 0.8, 0.5],
                 }}
                 transition={{
                   duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut"
+                  repeat: Number.POSITIVE_INFINITY,
+                  ease: "easeInOut",
                 }}
               />
-              
+
               <motion.div
                 className="absolute bottom-4 right-4 w-4 h-4 bg-emerald-400 rounded-full z-0"
                 animate={{
-                  opacity: [0.4, 0.7, 0.4]
+                  opacity: [0.4, 0.7, 0.4],
                 }}
                 transition={{
                   duration: 5,
-                  repeat: Infinity,
+                  repeat: Number.POSITIVE_INFINITY,
                   ease: "easeInOut",
-                  delay: 2
+                  delay: 2,
                 }}
               />
             </div>
           </motion.div>
         </div>
-
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

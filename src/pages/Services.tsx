@@ -54,9 +54,9 @@ const Services = () => {
       icon: Snowflake,
       title: "Seasonal & Specialty Services",
       description:
-        "Complete fall cleanup, spring preparation, holiday lighting, and emergency storm damage cleanup available year-round.",
+        "Complete fall and winter cleanup, spring preparation, holiday lighting, and emergency storm damage cleanup available year-round.",
       image: seasonalImage,
-      services: ["Fall Cleanup", "Spring Prep", "Holiday Lighting", "Storm Cleanup"],
+      services: ["Fall and Winter Cleanup", "Spring Prep", "Holiday Lighting", "Storm Cleanup"],
     },
     {
       icon: Sparkles,
@@ -97,7 +97,7 @@ const Services = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 mb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {serviceCategories.map((category, index) => (
               <motion.div
@@ -143,7 +143,7 @@ const Services = () => {
                   <a onClick={() => {navigate('/contact')}}
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300 group-hover:scale-105 cursor-pointer"
                   >
-                    Check Quote
+                    Get Quote
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </a>
                 </div>
@@ -199,8 +199,8 @@ const Services = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="/contact"
-                className="group bg-gradient-to-r from-emerald-500 to-green-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-emerald-400 hover:to-green-500 transition-all duration-300 hover:scale-105 shadow-xl flex items-center space-x-2"
+                onClick={() => navigate('/contact')}
+                className="group bg-gradient-to-r from-emerald-500 to-green-600 cursor-pointer text-white px-8 py-4 rounded-full font-bold text-lg hover:from-emerald-400 hover:to-green-500 transition-all duration-300 hover:scale-105 shadow-xl flex items-center space-x-2"
               >
                 <span>Get Your Free Quote</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

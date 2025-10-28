@@ -1,6 +1,6 @@
-import React, { useRef, useEffect, useState } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { CheckCircle, Star, Shield, Award, Clock, Heart, ArrowRight } from 'lucide-react';
+import React, { useRef} from 'react';
+import { motion} from 'framer-motion';
+import { CheckCircle, Star, Award, Heart, ArrowRight, DollarSign } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Import image
@@ -21,24 +21,14 @@ const WhyChooseUs: React.FC = () => {
       description: 'Prince George\'s County family business committed to our community'
     },
     {
-      icon: Shield,
-      title: 'Consistent Maintenance',
-      description: 'Regular, reliable service schedules you can count on'
-    },
-    {
       icon: Award,
       title: 'Expert Craftsmanship',
       description: 'Professional results with attention to every detail'
     },
     {
-      icon: Clock,
-      title: 'Reliable & Punctual',
-      description: 'On-time service you can count on, every time'
-    },
-    {
-      icon: CheckCircle,
-      title: 'Satisfaction Guaranteed',
-      description: 'We stand behind our work with comprehensive warranties'
+      icon: DollarSign,
+      title: 'Free Estimates',
+      description: 'No hidden fees, no obligation'
     }
   ];
 

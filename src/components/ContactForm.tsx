@@ -9,7 +9,6 @@ interface FormData {
   phone: string;
   address: string;
   city: string;
-  zipCode: string;
   serviceType: string;
   serviceRequest: string;
   serviceDescription: string;
@@ -24,7 +23,6 @@ const ContactForm: React.FC = () => {
     phone: '',
     address: '',
     city: '',
-    zipCode: '',
     serviceType: '',
     serviceRequest: '',
     serviceDescription: '',
@@ -193,7 +191,7 @@ const ContactForm: React.FC = () => {
         firstName: formData.firstName,
         email: formData.email,
         phone: formData.phone,
-        fullAddress: `${formData.address}, ${formData.city}, MD ${formData.zipCode}`,
+        fullAddress: `${formData.address}, ${formData.city}`,
         serviceType: formData.serviceType,
         serviceRequest: formData.serviceRequest,
         serviceDescription: formData.serviceDescription,
@@ -237,7 +235,6 @@ const ContactForm: React.FC = () => {
         phone: '',
         address: '',
         city: '',
-        zipCode: '',
         serviceType: '',
         serviceRequest: '',
         serviceDescription: '',
@@ -378,21 +375,6 @@ const ContactForm: React.FC = () => {
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors"
                     placeholder="Bowie"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="zipCode" className="block text-sm font-medium text-gray-700 mb-2">
-                    ZIP Code *
-                  </label>
-                  <input
-                    type="text"
-                    id="zipCode"
-                    name="zipCode"
-                    value={formData.zipCode}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors"
-                    placeholder="20715"
                   />
                 </div>
               </div>
